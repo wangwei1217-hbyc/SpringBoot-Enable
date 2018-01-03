@@ -3,6 +3,7 @@ package com.wamgwei.enable;
 import com.sun.prism.Texture;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,8 +17,8 @@ import org.springframework.scheduling.annotation.EnableAsync;
  *     如果导入的是一个配置类，则配置类中定义的Bean也都会被Spring容器托管
  */
 //@SpringBootApplication
-//@EnableAutoConfiguration
-@EnableConfigurationProperties
+@EnableAutoConfiguration
+//@EnableConfigurationProperties
 //@EnableAsync//启用异步
 @ComponentScan
 @Import({User.class,MyImportSelector.class,MyConfiguration.class,MyImportBeanDefinitionRegistrar.class})
